@@ -1,0 +1,22 @@
+#wrapper{
+width: 80px;
+margin-left: auto;
+margin-right: auto;
+}
+a
+{
+color: #0000ff;
+}
+.cat_links{
+display: block;
+padding: 5 px;
+padding-top: 10 px;
+padding-bottom: 10 px;
+border: 5px;
+background-color: #cccccc;
+color: #000000;
+}
+
+.cat_links:hover{
+background-color: #dddddd;
+}

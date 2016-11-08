@@ -1,0 +1,117 @@
+body{
+	font-family: "Open Sans", sans-serif;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.background{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/backgroundTools.jpg);
+	background-size: 100vw auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 5%;
+	z-index: -1;
+	position: absolute;
+	position: absolute;
+}
+.Logo{
+	width: 100vw;
+	height: 20vh;
+	background-image: url(../images/logo.png);
+	background-size: auto 20vh;
+	background-repeat: no-repeat;
+	background-position: top center;
+	position: absolute;
+	top: 10vh;
+}
+.container{
+	top: 40vh;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	position: relative;
+	background: rgba(60,62,63,0.5);
+	padding: 2%;
+	border-radius: 5px;
+	box-shadow: 1px 1px 4px #000000;
+}
+.container span{
+	width 100%;
+	height: 2px;
+	display: block;
+	background: rgb(195,193,194);
+	margin-bottom: 5%;
+	margin-top: 0;
+}
+h1{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	display: inline;
+	color: white
+}
+h6{
+	display: inline;
+}
+img{
+	height: 4vh;
+	width: 4vh;
+	display: none;
+	position: absolute;
+	left: -30px;
+	margin-top: 8px;
+}
+img.active{
+	display: inline-block;
+}
+.loginContainer{
+	width: 80%;
+	left: 10%;
+	position: relative;
+	margin-bottom: 2%;
+}
+.LoginInput{
+	background: transparent;
+	display: block;
+	height: 4vh;
+	width: 96%;
+	margin: 0 auto;
+	right: 0px;
+	position: relative;
+	margin-bottom: 2%;
+	padding: 3px 2%;
+	border: none;
+	border-bottom: 2px solid rgb(195,193,194);
+	border-radius: 0 0 5px 5px;
+	font-size: 16px;
+	color: white;
+    outline: none;
+}
+select{
+	width: 25%;
+	padding: 3px 5px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+#button{
+	margin-top: 2%;
+    margin-left: 2%;
+	width: 96%;
+	height: 30px;
+	line-height: 20px;
+	position: relative;
+	padding: 3px 5px;
+	cursor: pointer;
+	background: #5bc0de;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 1px 1px 4px rgb(60,62,63);
+	color: white;
+}
+#button:hover{
+	background: #6ed4f3;
+}

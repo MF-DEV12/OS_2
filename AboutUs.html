@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lampano Online</title>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="Assets/css/Home.css"></link>
+			
+		<script src="Assets/js/Parallax.js"></script>
+		<script src="Assets/js/Home.js"></script>
+		<script src="Assets/js/Jquery1.12.4.js"></script>
+		<script src="Assets/js/Function.js"></script>
+	</head>
+	<body>
+		
+<!-- Sidebar -->
+		<div id="SdeBar_container">
+			<form id="SdeBar_frmLin" class="active">
+				<ul class="SdeBar_content">
+					<H1 class="SdeBar_head">Menu</H1>
+					<li><a id="SdeBar_btnLin">Login</a></li>
+				</ul>
+			</form>
+			<form id="Sdebar_frmAdmin">
+				<ul class="SdeBar_content">
+					<H1 class="SdeBar_head">Menu</H1>
+					<li><a href="#">Orders</a></li>
+					<li><a href="#">Messages</a></li>
+					<li><a href="#">Item Stocks</a></li>
+					<H1 class="SdeBar_head">Reports</H1>
+					<li><a href="#">Sales</a></li>
+					<li><a href="#">Customers</a></li>
+					<li><a href="#">Items</a></li>
+					<li><a href="#">Reordering Level</a></li>
+					<li><a href="#">Supply</a></li>
+					<H1 class="SdeBar_head">Supplies</H1>
+					<li><a href="#">Request Supplies</a></li>
+				</ul>				
+			</form>
+			<form id="SdeBar_frmSupplier">
+				<ul class="SdeBar_content">
+					<H1 class="SdeBar_head">Menu</H1>
+					<li><a href="#">Supply Requests</a></li>
+				</ul>
+			</form>
+			<form id="SdeBar_frmLout">
+				<ul class="SdeBar_content">
+					<li><a id="SdeBar_btnLout">Logout</a></li>
+				</ul>
+			</form>
+		</div>
+	
+<!-- Login -->
+		<div id="Lin_Container">
+			<form id="Lin_frmInput" autocomplete="off">
+				<H1 class="Lin_head">Login</H1>
+				<input class="Lin_inpt" type="text" id="Lin_inptUname" placeholder="Enter Username"></input></br>
+				<input class="Lin_inpt" type="password" id="Lin_inptPword" placeholder="Enter Password"></input></br>
+			</form>
+			<form id="Lin_frmBtn">
+				<ul class="Lin_buttons">
+					<li><a id="Lin_btnSubmit">Submit</a></li>
+					<li><a id="Lin_btnCancel">Cancel</a></li>
+				</ul>
+			</form>
+			<form id="Lin_alrtNoInput">
+				<ul class="Lin_alrt">
+					<H3 class="Lin_alrt_head">Alert!!!</H3>
+					<li><a>Please Input Your Username and/or Password.</a></li>
+				</ul>
+			</form>
+			<form id="Lin_alrtInvalid">
+				<ul class="Lin_alrt">
+					<H3 class="Lin_alrt_head">Alert!!!</H3>
+					<li><a>Username or Password not match.</a></li>
+				</ul>
+			</form>
+		</div>
+		
+<!-- Alert Login Success -->
+		<div id="AlrtScss_container">
+			<form id="AlrtScss_frm">
+				<H1 class="AlrtScss_head">Login</H1>
+				<ul class="AlrtScss_content">
+					<li><a>Login Successful!.</a></li>
+				</ul>
+			</form>
+		</div>
+		
+<!-- Alert Logout -->
+		<div id="AlrtLout_container">
+			<form id="AlrtLout_frm">
+				<H1 class="AlrtLout_head">Logout</H1>
+				<ul class="AlrtLout_content">
+					<li><a>Loged out.</a></li>
+				</ul>
+			</form>
+		</div>
+
+<!-- Header -->		
+			<div class="block"></div>
+			<header class="headBox">
+				<div class="headBack">
+					<div id="headNavi"></div>		
+					<ul id="headNavi_content">
+						<div id="headNavi_btnSearch"></div>
+						<input id="headNavi_inptSearch_des" type="text" placeholder="Search"></input>
+						<li><a class="headNavi_btns1" href="AboutUs.html">About Us</a></li>
+						<li><a class="headNavi_btns2" href="Contact.html">Contact</a></li>
+						<li><a class="headNavi_btns3" href="Order.html">Order</a></li>
+					</ul>
+				</div>
+				<div class="headLogo"></div>
+			</header>
+
+<!-- Navigation Bar -->
+			<div id="Navi_container">
+				<ul id="Navi_content">
+					<div id="Navi_btnSidebar">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div id="Navi_logo"></div>
+					<div id="Navi_inptSearch">
+						<input id="Navi_inptSearch_des" type="text" placeholder="Search"></input>
+					</div>	
+					<div id="Navi_btns">
+						<li><a class="Navi_btns1" href="AboutUs.html">About Us</a></li>
+						<li><a class="Navi_btns2" href="Contact.html">Contact</a></li>
+						<li><a class="Navi_btns3" href="Order.html">Order</a></li>
+					</div>
+				</ul>
+			</div>
+
+	<!-- Order List View -->
+		<div id="OLV_container" style="background: rgb(242,242,242)">
+			<form id="OLV_form">
+				<H1 class="OLV_head">Order List</H1>
+					<ul class="OLV_table">
+						<li id="No">No.</li>
+						<li id="Item">Item</li>
+						<li id="Qnty">Qnty.</li>
+						<li id="Price">Price</li>
+					</ul>
+					<ul class="OLV_content">
+						<li></li>
+					</ul>				
+				<form id="OLV_frmNoItem">
+					<ul id="OLV_frmNoItemContent">
+						<li>No Item Yet.</li>
+					</ul>
+				</form>
+					<ul id="OLV_total">
+						<li id="total">Total</li>
+						<li id="totalPrice">P 1,000,000</li>
+					</ul>
+					</ul>
+					<ul class="OLV_btn">
+						<li><a id="OLV_btnBuy">Buy</a></li>
+					</ul>
+				<div id="OLV_btnEdit"></div>
+				<div id="OLV_btnClose"></div>
+			</form>
+			<div id="OLV_btnShow" class="active"><img src="Assets/img/show.png"></div>
+		</div>
+	
+<!-- Page Content -->
+
+<section class="pageWrap">
+	<div class="itemsContent">
+			<H1>QUALITY</H1>
+			<span class="contentSpan"></span>
+			<div id="content_heading">
+				<H2>
+						basdoaim shdpiom aposmd paboim sdpoasd aswm iajsdij aisd aduio hasud yasou idhoiavjw sdiuoh ausdha aiosjd oaish ohabws odfuiua yfawuef hoa iuwhfui oahwefu haoweif uioyaew yfuahwef afeha uhfgiuo hgeuij aifoj aijropajkf 
+				</H2>
+			</div>
+			<span class="contentSpan"></span>
+		</div>
+
+	<div class="itemDisplay">
+		<div class="container respo">
+			<div class="row">
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+				<div class="columns three respo">
+					<figure class="itemGrids">
+						<div class="itemPhoto"></div>
+						<h4>bricks</h4>
+					</figure>
+				</div>
+			</div>
+			<div><a id="btnSeemore">See More ></a></div>
+		</div>
+	</div>
+
+	<div class="valueContent">
+		<H1>VALUE</H1>
+		<span class="contentSpan"></span>
+		<div id="content_heading">
+			<H2>
+					basdoaim shdpiom aposmd paboim sdpoasd aswm iajsdij aisd aduio hasud yasou idhoiavjw sdiuoh ausdha aiosjd oaish ohabws odfuiua yfawuef hoa iuwhfui oahwefu haoweif uioyaew yfuahwef afeha uhfgiuo hgeuij aifoj aijropajkf 
+			</H2>
+		</div>
+		<span class="contentSpan"></span>
+	</div>
+
+	<div id="catContainer" class="container">	
+		<div  id="catPers" class="row">
+			<div id="catCard" class="columns twelve">
+				<form id="catCard1" class="active">
+					<div id="catBg1"></div>
+					<div id="catPaint" class="catTitle"></div>
+				</form>
+				<form id="catCard2">
+					<div id="catBg2" class="catBack"></div>
+					<div id="catWood" class="catTitle"></div>
+				</form>
+				<form id="catCard3">
+					<div id="catBg3" class="catBack"></div>
+					<div id="catPBC" class="catTitle"></div>
+				</form>
+				<form id="catCard4">
+					<div id="catBg4"></div>
+					<div id="catMetal" class="catTitle"></div>
+				</form>
+				<form id="catCard5">
+					<div id="catBg5" class="catBack"></div>
+					<div id="catElec" class="catTitle"></div>
+				</form>
+				<form id="catCard6">
+					<div id="catBg6" class="catBack"></div>
+					<div id="catVolt" class="catTitle"></div>
+				</form>
+				<form id="catCard7">
+					<div id="catBg7" class="catBack"></div>
+					<div id="catTool" class="catTitle"></div>
+				</form>
+				<form id="catCard8">
+					<div id="catBg8" class="catBack"></div>
+					<div id="catMisc" class="catTitle"></div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="columns one modify">
+				<div id="catBtnLeft" class="catPageBtn"></div>
+			</div>
+			<div class="columns eight modify" id="catCardNo">
+				<ul class="catCardNoBtn">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="columns one modify">
+				<div id="catBtnRight" class="catPageBtn"></div>
+			</div>
+		</div>
+	</div>
+		
+	<div class="hardwareContent container">
+		<H1>Hardware</H1>
+		<div id="content_heading row">
+			<div class="columns six test" id="mission">
+				<span class="hardwareContentSpan"></span>
+				<H2>MISSION</H2>
+				<H4>
+					basdoaim shdpiom aposmd paboim sdpoasd aswm iajsdij aisd aduio hasud yasou idhoiavjw sdiuoh ausdha
+				</H4>
+				<span class="hardwareContentSpan"></span>
+			</div>
+			<div class="columns six test" id="vision">
+				<span class="hardwareContentSpan"></span>
+				<H2>VISION</H2>
+				<H4>
+					afeha uhfgiuo hgeuij aifoj aijropajkf opiaJK WFop uaigue ghia[jevk jdsvpj iaW EIP Utjiow AEi
+				</H4>
+				<span class="hardwareContentSpan"></span>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+	<!-- Customer Info -->
+		<div id="CInfo_shadow"></div>
+		<div id="CInfo_container">
+			<form id="CInfo_frmInput" autocomplete="off">
+				<H3 class="CInfo_head">Please Fill Up</H3>
+				<input class="CInfo_inpt" type="text" id="CInfo_inptLName" placeholder="Lastname"></input>
+				<input class="CInfo_inpt" type="text" id="CInfo_inptFName" placeholder="Firstname"></input>
+				<input class="CInfo_inpt" type="text" id="CInfo_inptContact" placeholder="Contact No."></input>
+				<input class="CInfo_inpt" type="text" id="CInfo_inptEmail" placeholder="E-mail Address"></input>
+				<H4 id="CInfo_optional">(Optional)</H4>
+			</form>
+			<form id="CInfo_alrtNoInput">
+				<ul class="CInfo_alrt">
+					<H3 class="CInfo_alrt_head">Alert!!!</H3>
+					<li><a>Please Input the needed area..</a></li>
+				</ul>
+			</form>
+			<form id="CInfo_frmBtn">
+				<ul class="CInfo_buttons">
+					<li><a id="CInfo_btnSubmit">Submit</a></li>
+				</ul>
+			</form>
+			<div id="CInfo_btnClose"></div>
+		</div>
+
+	<footer class="aboutUs">
+		<div class="container">
+			<div class="row">
+				<div class="columns five respo" id="links">
+					<div class="br respo2">
+					<strong>Follow Us On</strong>
+					<ul>
+						<img id="fb" src="Assets/img/fb.png">
+						<li><a href="">Facebook</a></li>
+						<br>
+						<img id="twitter" src="Assets/img/twitter.png">
+						<li><a href="">Twitter</a></li>
+					</ul>
+					</div>
+					<div class="br respo1">
+					<strong>Email Us On</strong>
+					<br>
+					<img id="google" src="Assets/img/google.png">
+					<a href="">LampanoHardware</a>
+					</div>
+					<div class="br respo">
+					<strong>Our Branches</strong>
+					<ul class="branch">
+						<li id="branch1st" class="active">Novaliches</li>
+						<li id="branch2nd">Maycuayan</li>
+					</ul>
+					</div>
+				</div>
+				<form id="branch1" class="active">
+					<div class="columns seven modify" id="map1">
+						<strong>Our Location </strong>at 22 General Luis Novaliches, Quezon City, Metro Manila
+						<div class="map">
+						<img id="google" src="Assets/img/Maps.png">
+						</div>
+					</div>
+				</form>
+				<form id="branch2">
+					<div class="columns seven modify" id="map2">
+						<strong>Our Location At</strong>
+					</div>
+				</form>
+			</div>
+		</div>
+	</footer>
+
+	</body>
+</html>

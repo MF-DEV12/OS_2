@@ -1,0 +1,32 @@
+[1]
+Username=rolen
+Password=lampano
+LoginType=ADMIN
+Firstname=Rolen
+Lastname=Lampano
+Gender=MALE
+AuthorithyLevel=4
+[2]
+Username=patrick
+Password=dejesus
+LoginType=ADMIN
+Firstname=Patrick
+Lastname=De Jesus
+Gender=MALE
+AuthorithyLevel=2
+[2]
+Username=melyza
+Password=sobrino
+LoginType=SUPPLIER
+Firstname=Melyza
+Lastname=Sobrino
+Gender=FEMALE
+AuthorithyLevel=0
+[2]
+Username=van
+Password=urbino
+LoginType=SUPPLIER
+Firstname=Raemond Van
+Lastname=Urbino
+Gender=MALE
+AuthorithyLevel=0
