@@ -38,7 +38,7 @@
 					while($record = mysqli_fetch_array($result)){
 							echo "<tr>
 									<td>". $record['Name'] ."</td>
-									<td>". $record['Description'] ." </td>
+									<td>". $record['Name'] ." </td>
 									<td><input type=text value='" . $record['Quantity'] . "' class=quantity onchange='quantityChange(this, " . $record['OrderListNo'] . ")' /></td>
 									<td>". $record['Total'] ." </td>
 							</tr>";
@@ -79,7 +79,7 @@
 					while($postfetch = mysqli_fetch_array($postresult)){
 							echo "<tr>
 									<td>". $postfetch['Name'] ."</td>
-									<td>". $postfetch['Description'] ." </td>
+									<td>". $postfetch['Name'] ." </td>
 									<td><input type=text value='" . $postfetch['Quantity'] . "' class=quantity onchange='quantityChange(this, " . $postfetch['OrderListNo'] . ")' /></td>
 									<td>". $postfetch['Total'] ." </td>
 							</tr>";   
